@@ -5,10 +5,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
-const ContactForm = () => {
+const ContactForm: React.FC = () => {
   const { toast } = useToast();
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Message sent!",
