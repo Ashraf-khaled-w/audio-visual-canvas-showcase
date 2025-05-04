@@ -3,15 +3,12 @@ import React from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/components/ui/use-toast';
+import { toast } from 'sonner';
 
 const ContactForm = () => {
-  const { toast } = useToast();
-  
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
+    toast.success("Message sent!", {
       description: "We'll get back to you as soon as possible.",
     });
   };
